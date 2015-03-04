@@ -1,0 +1,17 @@
+truncate table player;
+truncate table pay_order;
+insert into player(uin,channel,serverid,accountId,accountName) values(12,100007,12,'1232','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(13,100009,12,'1232','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(14,100010,1,'1035079','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(15,12,1,'12','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(16,100013,12,'1232','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(17,18,12,'1232','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(18,19,1,'1232','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(19,997,1,'accountId','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(20,13,1,'123123123','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(21,17,1,'accountId','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(22,100014,1,'accountId','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(23,996,12,'1232','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(24,300001,1,'4PnhJ67kBd1QF1WK00ZmgfYR93Y=','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(25,101,1,'451CCF57687B313CBCEF8B4BF9DC36A4','test');
+insert into player(uin,channel,serverid,accountId,accountName) values(26,103,1,'10000000','test');

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+        <property name="DriverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://10.10.6.188:3306/taphero_1_1?useUnicode=true&amp;characterEncoding=utf8"/>
+        <property name="username" value="th_pro"/>
+        <property name="password" value="th_pro!!@@__))"/>
+        <!--
+                <property name="url" value="jdbc:mysql://10.175.13.86:3306/test" />
+                <property name="username" value="root" />
+                <property name="password" value="sa" />
+        -->
+
+        <property name="maxActive" value="3"/>
+        <property name="initialSize" value="3"/>
+        <property name="maxWait" value="60000"/>
+        <property name="minIdle" value="2"/>
+        <property name="timeBetweenEvictionRunsMillis" value="3000"/>
+        <property name="minEvictableIdleTimeMillis" value="300000"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+    </bean>
+
+    <bean name="memcachedClient"
+          class="net.rubyeye.xmemcached.utils.XMemcachedClientFactoryBean" destroy-method="shutdown">
+        <property name="servers">
+            <value>localhost:12000</value>
+        </property>
+        <!-- server's weights -->
+        <property name="weights">
+            <list>
+                <value>1</value>
+            </list>
+        </property>
+        <!-- nio connection pool size -->
+        <property name="connectionPoolSize" value="20"></property>
+        <!-- Use binary protocol,default is TextCommandFactory -->
+        <property name="commandFactory">
+            <bean class="net.rubyeye.xmemcached.command.BinaryCommandFactory"></bean>
+        </property>
+        <!-- Distributed strategy -->
+        <property name="sessionLocator">
+            <bean class="net.rubyeye.xmemcached.impl.KetamaMemcachedSessionLocator"></bean>
+        </property>
+        <!-- Serializing transcoder -->
+        <property name="transcoder">
+            <bean class="net.rubyeye.xmemcached.transcoders.SerializingTranscoder"/>
+        </property>
+    </bean>
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="20"/>
+        <property name="minIdle" value="20"/>
+        <property name="testOnBorrow" value="true"/>
+        <property name="testOnReturn" value="true"/>
+    </bean>
+
+    <!-- redis的连接池pool，不是必选项：timeout/password  -->
+    <bean id = "jedisPool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="jedisPoolConfig" /> <!-- 加载jedisPool配置信息 -->
+        <constructor-arg name="host" value="127.0.0.1" /><!-- redis主机地址 -->
+        <constructor-arg name="port" value="6379"/> <!-- redis连接端口 -->
+    </bean>
+    
+</beans>

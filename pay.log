@@ -1,0 +1,147 @@
+2015-03-03 11:15:24 Loading XML bean definitions from class path resource [context.xml]
+2015-03-03 11:15:28 Loading XML bean definitions from class path resource [ds-context.xml]
+2015-03-03 11:15:28 JSR-250 'javax.annotation.ManagedBean' found and supported for component scanning
+2015-03-03 11:15:28 JSR-330 'javax.inject.Named' annotation found and supported for component scanning
+2015-03-03 11:15:28 Loading XML bean definitions from class path resource [ds-context.xml]
+2015-03-03 11:15:28 Overriding bean definition for bean 'dataSource': replacing [Generic bean: class [org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [ds-context.xml]] with [Generic bean: class [org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [ds-context.xml]]
+2015-03-03 11:15:28 Overriding bean definition for bean 'jedisPoolConfig': replacing [Generic bean: class [redis.clients.jedis.JedisPoolConfig]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [ds-context.xml]] with [Generic bean: class [redis.clients.jedis.JedisPoolConfig]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [ds-context.xml]]
+2015-03-03 11:15:28 Overriding bean definition for bean 'jedisPool': replacing [Generic bean: class [com.zerogame.eviver.storage.testing.MockJedisPool]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [ds-context.xml]] with [Generic bean: class [com.zerogame.eviver.storage.testing.MockJedisPool]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [ds-context.xml]]
+2015-03-03 11:15:28 Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1e397ed7: startup date [Tue Mar 03 11:15:28 CST 2015]; root of context hierarchy
+2015-03-03 11:15:28 JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2015-03-03 11:15:28 Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@48fa0f47: defining beans [dataSource,org.springframework.jdbc.datasource.init.DataSourceInitializer#0,jedisPoolConfig,jedisPool,MMIAPApiController,orderPayWebCallBack,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.validation.beanvalidation.LocalValidatorFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,userDao,payOrderDao,jdbcTemplate,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.jdbc.datasource.init.DataSourceInitializer#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-03-03 11:15:29 Executing SQL script from class path resource [ds-schema.sql]
+2015-03-03 11:15:29 Done executing SQL script from class path resource [ds-schema.sql] in 12 ms.
+2015-03-03 11:15:29 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:29 Done executing SQL script from class path resource [ds-cleanup.sql] in 18 ms.
+2015-03-03 11:15:29 Mapped "{[/cmcc//aa],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto protected java.lang.String zerogame.info.javapay.web.MMIAPApiController.test(java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/cmcc//mmiap],methods=[POST],params=[],headers=[],consumes=[application/xml],produces=[],custom=[]}" onto protected me.gall.ten.control.api.bean.SyncAppOrderResp zerogame.info.javapay.web.MMIAPApiController.mmiap(java.lang.String,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.util.Map<java.lang.String, java.lang.Object>) throws java.lang.Exception
+2015-03-03 11:15:29 Mapped "{[/v1/pay/pp],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.ppPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/tongbutui],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.tongbutuiPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/itools],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.itoolsPayOrder(java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/kuaiyong],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.kuaiyongPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/wandoujia],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.wandoujiaPayOrder(java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/aisi],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.aisiPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/dangle],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.danglePayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/muzhiwan],methods=[GET],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.muzhiwanPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/ipay],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.ipayPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/baidu],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.baiduPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/oppo],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.oppoPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/xysdk],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.xysdkPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/youxigongchang],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.youxigongchangPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/360],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.payOrder360(java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/winphonewfk],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.winphonewfkPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 Mapped "{[/v1/pay/duandai],methods=[POST],params=[],headers=[],consumes=[],produces=[],custom=[]}" onto public java.lang.String zerogame.info.javapay.web.OrderPayWebCallBack.duandaiPayOrder(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+2015-03-03 11:15:29 HV000001: Hibernate Validator 5.0.0.Final
+2015-03-03 11:15:30 Executing SQL script from class path resource [ds-schema.sql]
+2015-03-03 11:15:30 Done executing SQL script from class path resource [ds-schema.sql] in 5 ms.
+2015-03-03 11:15:30 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:30 Done executing SQL script from class path resource [ds-cleanup.sql] in 9 ms.
+2015-03-03 11:15:30 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:30 FrameworkServlet '': initialization started
+2015-03-03 11:15:30 FrameworkServlet '': initialization completed in 34 ms
+2015-03-03 11:15:30 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:30 Executed SQL script from class path resource [ds-cleanup.sql] in 34 ms.
+2015-03-03 11:15:30 tongbutui_pay source=tongbutui trace_no=TBT-1232-123123213-1-12,amount=600,partner=1232,paydes={"server_id":"1","uin":"1"},debug=,tborder=,sign=b6861b808f285a2e90acc62f8d8820bd
+2015-03-03 11:15:30 Request URL::/v1/pay/tongbutui:: Time Taken=47 ms.
+2015-03-03 11:15:30 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:30 FrameworkServlet '': initialization started
+2015-03-03 11:15:30 FrameworkServlet '': initialization completed in 3 ms
+2015-03-03 11:15:30 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:30 Executed SQL script from class path resource [ds-cleanup.sql] in 22 ms.
+2015-03-03 11:15:30 winhphonewfk accountId=4PnhJ67kBd1QF1WK00ZmgfYR93Y=, goodid=1,serverid=,tradeid=50287169,sign=6a3ecec75368a78a929599fa701ba928
+2015-03-03 11:15:30 Request URL::/v1/pay/winphonewfk:: Time Taken=23 ms.
+2015-03-03 11:15:30 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:30 FrameworkServlet '': initialization started
+2015-03-03 11:15:30 FrameworkServlet '': initialization completed in 3 ms
+2015-03-03 11:15:30 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:30 Executed SQL script from class path resource [ds-cleanup.sql] in 27 ms.
+2015-03-03 11:15:30 oppo pay aid=BAIDU-123123123-123123213-1-1,timestamp=123123213,result=0,amount=10,cardtype= 1,client_secret=12,orderid=2013032813296437
+2015-03-03 11:15:30 Request URL::/v1/pay/baidu:: Time Taken=30 ms.
+2015-03-03 11:15:30 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:30 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 53 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 24 ms.
+2015-03-03 11:15:31 xysdk pay orderid= 2013032813296437 uid=aa serverid=1 amount=10 extra=XY-accountId-123123213-1-1 ts=1111 sign=1232 sig=12
+2015-03-03 11:15:31 Request URL::/v1/pay/xysdk:: Time Taken=7 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 4 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 74 ms.
+2015-03-03 11:15:31 aisi pay order_id=2013032813296437 billno=AISI-1232-123123213-1-12,account=wpfun,amount=10,status=0,appid=app_id,roleid=1232,zone=12,sign=sign
+2015-03-03 11:15:31 Request URL::/v1/pay/aisi:: Time Taken=6 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 40 ms.
+2015-03-03 11:15:31 cmcc pay order MsgType=SyncAppOrderReq, Version=1.0.0,OrderID=11130619144434998192,CheckID=0,TradeID=L0IF7AF2J4L5IF1B,Price=100,ActionTime=20130619144435,ActionID=1,MSISDN=,FeeMSISDN=ECAD2EVFADF3AE2A,AppID=300001489326,ProgramID=null,PayCode=30000148932601,TotalPrice=100,SubsNumb=1,SubsSeq=1,ChannelID=2000000032,ExData=10000000-1
+2015-03-03 11:15:31 Request URL::/cmcc/mmiap:: Time Taken=207 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 3 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 17 ms.
+2015-03-03 11:15:31 Request URL::/v1/pay/ipay:: Time Taken=7 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 3 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 16 ms.
+2015-03-03 11:15:31 oppo pay notigyId=1,attach=OPPO-accountId-123123213-1-1,price=10,count=0,partnerOrder=123123213,productName=12,productDesc=2013032813296437,sign=aaa
+2015-03-03 11:15:31 Request URL::/v1/pay/oppo:: Time Taken=5 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 16 ms.
+2015-03-03 11:15:31 pppay order_id=2013032813296437 billno=PP-1232-123123213-1-12,account=wpfun,amount=10,status=0,app_id=app_id,roleid=1232,zone=12,sign=
+2015-03-03 11:15:31 Request URL::/v1/pay/pp:: Time Taken=5 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 16 ms.
+2015-03-03 11:15:31 pay wandoujia content:{"timeStamp":"123","orderId":"123","money":"64800","chargeType":"ALIPAY","appKeyId":"123456789","buyerId":"123456","out_trade_no":"WDJ-12-123123213-1-1","cardNo":"123"} signType:RSA sign:I4cXlMEQ7wSMClT2Skogehxi9Fh2iOR6JTDGoTUtfS7s4hra5t1mi
+2015-03-03 11:15:31 Request URL::/v1/pay/wandoujia:: Time Taken=5 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 33 ms.
+2015-03-03 11:15:31 youxigongchangpay serial_number=111111, cp=91,timestamp=11111111111,result=0,extend=91-1232-11111111111-3-12,server=12,product_id=3,product_num=1,game_orderno=aaa,amount=100,sign=9d62546a635691735744a4295ab2c172
+2015-03-03 11:15:31 Request URL::/v1/pay/youxigongchang:: Time Taken=7 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 5 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 21 ms.
+2015-03-03 11:15:31 dangle pay order=order,money=10,mid=1111,time=123123213,result=1,ext=DANGLE-1232-123123213-1-12,key=1hW5KGDiYptZ,signature=861a97acf8e822e6703b75d7cfc10927
+2015-03-03 11:15:31 Request URL::/v1/pay/dangle:: Time Taken=5 ms.
+2015-03-03 11:15:31 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:31 FrameworkServlet '': initialization started
+2015-03-03 11:15:31 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:31 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:31 Executed SQL script from class path resource [ds-cleanup.sql] in 29 ms.
+2015-03-03 11:15:31 sign is I4cXlMEQ7wSMClT2Skogehxi9Fh2iOR6JTDGoTUtfS7s4hra5t1mix0MYnL+++d4LrEbK+CYXDcKOPg+nvNl+AWoLa7jNlb574LXeemrhKnSkj1Ei3c9OGJjtaaY6xfFDma9mxJwygZoOGimK5/wNemISUkEnui/CNgbweCTcb4= notify is XNTMkywjZJL1QogHxmy06e+nukjW+OlaBCeR5Qeapz3KIyoIF+jcDlGdUBIF+bXniY79vWfhKefzI/EU4h3HtvVgUEQMnsYaTEOy44P05kHUD6JWphYlEFbbMwlV0jVdq1xQTMImQS1PCdbJ7Czj7jbAINumoP7oqvzxgM9iUpRcZ4aLFc5avWoX7PgEliwHwWSm3GyatRPSBSZSQVFi964t9syduTQxrsCgzDoI1jfXPXgUr6CKQ4ZBWLVaI72meCRPpjmDBmk9oHmN9gpMy6I5hwoaOhWZOXU3tym1afhsKJ/nfKrpyFLnYebM9SQdrnyKb+oxJXMSpbFQrSJGWA==
+2015-03-03 11:15:32 notify json is {"order_id_com":"IT-1035079-1402461132-5-1","amount":"0.10","account":"i245543632","order_id":"2014061100744934","result":"success","user_id":"1035079"} verified is true
+2015-03-03 11:15:32 user is 14
+2015-03-03 11:15:32 1035079
+2015-03-03 11:15:32 Request URL::/v1/pay/itools:: Time Taken=528 ms.
+2015-03-03 11:15:32 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:32 FrameworkServlet '': initialization started
+2015-03-03 11:15:32 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:32 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:32 Executed SQL script from class path resource [ds-cleanup.sql] in 25 ms.
+2015-03-03 11:15:32 duandai pay order merid=1055, orderid=11502040011093807518-3265961,ordertime=20150204205616,feecode=200,privstr=451CCF57687B313CBCEF8B4BF9DC36A4-1,feestatus=2,sign=413bf6ed5ede26bc25b4103e0da369c9
+2015-03-03 11:15:32 Request URL::/v1/pay/duandai:: Time Taken=10 ms.
+2015-03-03 11:15:32 Initializing Spring FrameworkServlet ''
+2015-03-03 11:15:32 FrameworkServlet '': initialization started
+2015-03-03 11:15:32 FrameworkServlet '': initialization completed in 2 ms
+2015-03-03 11:15:32 Executing SQL script from class path resource [ds-cleanup.sql]
+2015-03-03 11:15:32 Executed SQL script from class path resource [ds-cleanup.sql] in 14 ms.
+2015-03-03 11:15:32 Request URL::/v1/pay/muzhiwan:: Time Taken=26 ms.
+2015-03-03 11:15:32 Closing org.springframework.web.context.support.GenericWebApplicationContext@1e397ed7: startup date [Tue Mar 03 11:15:28 CST 2015]; root of context hierarchy
+2015-03-03 11:15:32 Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@48fa0f47: defining beans [dataSource,org.springframework.jdbc.datasource.init.DataSourceInitializer#0,jedisPoolConfig,jedisPool,MMIAPApiController,orderPayWebCallBack,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,mvcContentNegotiationManager,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping#0,org.springframework.format.support.FormattingConversionServiceFactoryBean#0,org.springframework.validation.beanvalidation.LocalValidatorFactoryBean#0,org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter#0,org.springframework.web.servlet.handler.MappedInterceptor#0,org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver#0,org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver#0,org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver#0,org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping,org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter,org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter,userDao,payOrderDao,jdbcTemplate,org.springframework.web.servlet.handler.MappedInterceptor#1,org.springframework.jdbc.datasource.init.DataSourceInitializer#1,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2015-03-03 11:15:32 Invocation of destroy method 'close' failed on bean with name 'jedisPool': redis.clients.jedis.exceptions.JedisException: Could not destroy the pool
